@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/072e5df971.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid mx-5">
+        <div class="d-flex justify-content-beteewn">
+          <a class="navbar-brand d-flex align-items-center"
+            ><i class="fa-brands fa-instagram fa-xl"></i>&ensp; Instagram</a
+          >
+        </div>
+        <form class="d-flex">
+          <button
+            class="btn btn-success me-2"
+            data-bs-toggle="modal"
+            data-bs-target="#miModal"
+            type="button"
+          >
+            Create a new post
+          </button>
+
+          <div class="modal" tabindex="-1" id="miModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Create a New Post</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p><strong>Caption</strong></p>
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Add the caption of your post here..."
+                  ></textarea>
+                  <div class="d-flex justify-content-start align-items-center mt-3 gap-3">
+                    <i class="fa-solid fa-camera fa-lg" style="cursor: pointer;"></i>
+                    <i class="fa-solid fa-location-dot fa-lg" style="cursor: pointer;"></i>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-success">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accessibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <br />
+              <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center mt-3 gap-3">
+      <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#gridView" type="button"
+                role="tab" aria-controls="grid" aria-selected="true"><i
+                    class="fa-solid fa-table-cells"></i></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detailView" type="button"
+                role="tab" aria-controls="detail" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+        </li>
+      </ul>
+    </div>
+    
+      <div class="container tab-content w-75 mt-3">
+        <div class="tab-pane fade show active overflow-hidden" id="gridView" role="tabpanel" aria-labelledby="grid-tab">
+
+          <div class="row gx-3 mx-center">
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://cdn.pixabay.com/photo/2022/05/16/11/01/pugs-7200102_640.png"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1666901328734-3c6eb9b6b979?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tfGVufDB8fDB8fHww"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJhbmRvbXxlbnwwfHwwfHx8MA%3D%3D"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row gx-3 mt-3">
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://images.unsplash.com/photo-1547961547-321889bff29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGVzdCVDMyVBOXRpY298ZW58MHx8MHx8fDA%3D"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5zcGlyYWNpJUMzJUIzbnxlbnwwfHwwfHx8MA%3D%3D"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://images.unsplash.com/photo-1495001258031-d1b407bc1776?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGluc3BpcmFjaSVDMyVCM258ZW58MHx8MHx8fDA%3D"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row gx-3 mt-3">
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1681488007344-c75b0cf8b0cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGluc3BpcmFjaSVDMyVCM258ZW58MHx8MHx8fDA%3D"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://images.unsplash.com/photo-1535365860506-d8b700079e59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGluc3BpcmFjaSVDMyVCM258ZW58MHx8MHx8fDA%3D"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="ratio ratio-1x1">
+                <img
+                  src="https://images.unsplash.com/photo-1491147334573-44cbb4602074?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fGluc3BpcmFjaSVDMyVCM258ZW58MHx8MHx8fDA%3D"
+                  class="img-fluid rounded"
+                  alt="Imagen 3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="tab-pane fade overflow-hidden" id="detailView">
+        <div class="container w-40 d-flex flex-column align-items-center">
+
+          
+        <div class="col-7 card mt-3">
+            <div class="d-flex justify-content-between mx-3">
+              <h5 class="card-title fs-4">Perritos</h5>
+              <h6 class="fs-4">1/5</h6>
+            </div>
+            <img
+              src="https://cdn.pixabay.com/photo/2022/05/16/11/01/pugs-7200102_640.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <strong>250 Likes</strong>
+              </p>
+              <p class="card-text">
+                Peligro, perros mimosos cerca.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-7 card mt-3">
+            <div class="d-flex justify-content-between mx-3">
+              <h5 class="card-title fs-4">Arbol solito</h5>
+              <h6 class="fs-4">2/5</h6>
+            </div>
+            <img
+              src="https://plus.unsplash.com/premium_photo-1666901328734-3c6eb9b6b979?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tfGVufDB8fDB8fHww"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <strong>6 Likes</strong>
+              </p>
+              <p class="card-text">
+                Es un arbol, te daria detalles, pero solo es un arbol, madera y esas cosas.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-7 card mt-3">
+            <div class="d-flex justify-content-between mx-3">
+              <h5 class="card-title fs-4">Bombilla bombillona</h5>
+              <h6 class="fs-4">3/5</h6>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJhbmRvbXxlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <strong>100 Likes</strong>
+              </p>
+              <p class="card-text">
+                Bombilla inspiradora, hace que se te prenda la bombilla y te den ganas de poner bombillas en tu proyecto.
+              </p>
+            </div>
+          </div>
+          <div class="col-7 card mt-3">
+            <div class="d-flex justify-content-between mx-3">
+              <h5 class="card-title fs-4">Todo al rosa</h5>
+              <h6 class="fs-4">4/5</h6>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1547961547-321889bff29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGVzdCVDMyVBOXRpY298ZW58MHx8MHx8fDA%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <strong>1.000 Likes</strong>
+              </p>
+              <p class="card-text">
+                El rosa es inspirador........
+              </p>
+            </div>
+          </div>
+          <div class="col-7 card mt-3">
+              <div class="d-flex justify-content-between mx-3">
+              <h5 class="card-title fs-4">No te rindas</h5>
+              <h6 class="fs-4">5/5</h6>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5zcGlyYWNpJUMzJUIzbnxlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <strong>100.000 Likes</strong>
+              </p>
+              <p class="card-text">
+                “Los buenos tiempos crean gente débil, la gente débil crea malos tiempos, los malos tiempos crean gente fuerte, la gente fuerte crea buenos tiempos”.
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
